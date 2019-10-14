@@ -1,5 +1,15 @@
 import React from 'react';
 
+import schema from './schema';
+import TutorialForm from '../../website/components/TutorialForm';
+
 export default function App() {
-  return <h1>Hi!</h1>;
+  return (
+    <TutorialForm>
+      <AutoForm
+        schema={schema}
+        onSubmit={model => alert(JSON.stringify(model, null, 2))}
+      />
+    </TutorialForm>
+  );
 }
